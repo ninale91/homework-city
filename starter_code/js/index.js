@@ -4,12 +4,11 @@
 //
 // When user insert text form and presses submit:
 // Get cityName
-// Validate city
 // Compare input to city name
 // Change city image
 // Clear value input
 //
-// IF (EnteredText= Sydney){
+// IF (city = Sydney or LA or NYC ect.){
 //   Change Background Image to Sydney Image
 // }
 // ELSE IF (EnteredText= NewYork){
@@ -27,7 +26,7 @@ function runPicApp(e) {
   getCityName();
   var city = getCityName();
   compareCity(city);
-
+  clearValueInput(city);
 }
 
 function getCityName() {
@@ -41,6 +40,7 @@ function compareCity(city) {
  LACompare(city);
  austinCompare(city);
  sydneyCompare(city);
+ nonValidValue(city);
 }
 
 function newYorkCompare(city) {
@@ -71,4 +71,8 @@ function sydneyCompare(city) {
   if (city == 'Sydney' || city == 'SYD') {
     $('body').css('background-image', 'url(images/sydney.jpg)');
   }
+}
+
+function clearValueInput(city){
+  $('#city-type').val('');
 }
