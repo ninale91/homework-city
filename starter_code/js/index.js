@@ -40,7 +40,6 @@ function compareCity(city) {
  LACompare(city);
  austinCompare(city);
  sydneyCompare(city);
- nonValidValue(city);
 }
 
 function newYorkCompare(city) {
